@@ -1,0 +1,172 @@
+
+
+.about-hero{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:50px;
+    padding:80px 8%;
+}
+
+.about-text{
+    flex:1;
+}
+
+.about-text h1{
+    font-size:55px;
+    color:#183b1f;
+    margin-bottom:25px;
+}
+
+.about-text p{
+    font-size:20px;
+    line-height:1.8;
+    color:#555;
+    margin-bottom:20px;
+}
+
+.about-image{
+    flex:1;
+}
+
+.about-image img{
+    width:100%;
+    border-radius:25px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+    transition:0.3s;
+}
+
+.about-image img:hover{
+    transform:scale(1.03);
+}
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:white;
+    box-shadow:0 2px 10px rgba(0,0,0,0.05);
+}
+
+.logo img{
+    width:220px;
+    height: 100px;
+}
+
+.nav-links{
+    display:flex;
+    gap:30px;
+    list-style:none;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#1d1d1d;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color:#4CAF50;
+}
+
+
+
+.info-section{
+    display:flex;
+    gap:30px;
+    padding:40px 8%;
+}
+
+.card{
+    background:white;
+    padding:35px;
+    border-radius:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+    flex:1;
+}
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card h2{
+    color:#2E7D32;
+    margin-bottom:20px;
+    font-size:32px;
+}
+
+.card p{
+    color:#555;
+    line-height:1.8;
+    font-size:18px;
+}
+
+
+.objectives{
+    padding:60px 8%;
+}
+
+.objectives h2{
+    text-align:center;
+    font-size:45px;
+    color:#183b1f;
+    margin-bottom:50px;
+}
+
+.objectives-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+    gap:30px;
+}
+
+.objective-card{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.objective-card:hover{
+    transform:translateY(-10px);
+}
+
+.objective-card h3{
+    color:#4CAF50;
+    margin-bottom:15px;
+    font-size:25px;
+}
+
+.objective-card p{
+    color:#555;
+    line-height:1.7;
+}
+
+
+
+@media (max-width:768px){
+
+    .about-hero{
+        flex-direction:column;
+    }
+
+    .about-text h1{
+        font-size:40px;
+        text-align:center;
+    }
+
+    .about-text p{
+        text-align:center;
+        font-size:18px;
+    }
+
+    .info-section{
+        flex-direction:column;
+    }
+
+    .objectives h2{
+        font-size:35px;
+    }
+
+}
