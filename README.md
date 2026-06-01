@@ -37,5 +37,14 @@ Para ver y explorar el proyecto de manera local en tu equipo, sigue estos sencil
 ### Opción 1: Clonar el repositorio (Recomendado)
 1. Abre tu terminal (Git Bash, CMD o la terminal de tu preferencia).
 2. Clona este repositorio ejecutando el siguiente comando:
-```bash
-   git clone [https://github.com/carlosmariov98-hue/EcoMarket_CarlosVelasquez.git](https://github.com/carlosmariov98-hue/EcoMarket_CarlosVelasquez.git)
+
+git clone [https://github.com/carlosmariov98-hue/EcoMarket_CarlosVelasquez.git](https://github.com/carlosmariov98-hue/EcoMarket_CarlosVelasquez.git)
+
+3. Abre la carpeta del proyecto en Visual Studio Code.
+
+4. Busca el archivo index.html en el explorador de archivos izquierdo.
+
+5. Haz clic derecho sobre index.html y selecciona "Open with Live Server" (o presiona el botón Go Live en la barra inferior de VS Code) para abrir tu navegador y visualizar pa pagina web.
+
+
+
