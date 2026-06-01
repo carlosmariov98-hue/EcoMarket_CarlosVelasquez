@@ -1,182 +1,268 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+:root {
+    --color-principal: #4CAF50;
+    --color-principal-hover: #388E3C;
+    --color-texto-oscuro: #1d1d1d;
+    --color-texto-medio: #555555;
+    --color-texto-claro: #666666;
+    --color-texto-tarjeta: #333333;
+    --color-texto-rol: #888888;
+    --verde-titulo: #183b1f;
+    --verde-subtitulo: #2E7D32;
+    --fondo-pagina: #f4f8f2;
+    --fondo-seccion: #f9f9f9;
+    --fondo-blanco: #ffffff;
+    --fondo-footer: #f4fcf6;
+    --borde-footer: #e2f0e6;
+    --sombra-header: rgba(0, 0, 0, 0.05);
+    --sombra-hero: rgba(0, 0, 0, 0.15);
+    --sombra-tarjeta: rgba(0, 0, 0, 0.08);
+    --sombra-testimonio: rgba(0, 0, 0, 0.05);
 }
 
-body{
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     font-family: Arial, Helvetica, sans-serif;
-    background:#f4f8f2;
-    color:#1d1d1d;
+    background: var(--fondo-pagina);
+    color: var(--color-texto-oscuro);
 }
 
-.about-hero{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:50px;
-    padding:80px 8%;
+.about-hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    padding: 80px 8%;
 }
 
-.about-text{
-    flex:1;
+.about-text {
+    flex: 1;
 }
 
-.about-text h1{
-    font-size:55px;
-    color:#183b1f;
-    margin-bottom:25px;
+.about-text h1 {
+    font-size: 55px;
+    color: var(--verde-titulo);
+    margin-bottom: 25px;
 }
 
-.about-text p{
-    font-size:20px;
-    line-height:1.8;
-    color:#555;
-    margin-bottom:20px;
+.about-text p {
+    font-size: 20px;
+    line-height: 1.8;
+    color: var(--color-texto-medio);
+    margin-bottom: 20px;
 }
 
-.about-image{
-    flex:1;
+.about-image {
+    flex: 1;
 }
 
-.about-image img{
-    width:100%;
-    border-radius:25px;
-    box-shadow:0 10px 25px rgba(0,0,0,0.15);
-    transition:0.3s;
+.about-image img {
+    width: 100%;
+    border-radius: 25px;
+    box-shadow: 0 10px 25px var(--sombra-hero);
+    transition: 0.3s;
 }
 
-.about-image img:hover{
-    transform:scale(1.03);
+.about-image img:hover {
+    transform: scale(1.03);
 }
 
-header{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px 8%;
-    background:white;
-    box-shadow:0 2px 10px rgba(0,0,0,0.05);
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: var(--fondo-blanco);
+    box-shadow: 0 2px 10px var(--sombra-header);
 }
 
-.logo img{
-    width:220px;
+.logo img {
+    width: 220px;
     height: 100px;
 }
 
-.nav-links{
-    display:flex;
-    gap:30px;
-    list-style:none;
+.nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
 }
 
-.nav-links a{
-    text-decoration:none;
-    color:#1d1d1d;
-    font-weight:600;
-    transition:0.3s;
+.nav-links a {
+    text-decoration: none;
+    color: var(--color-texto-oscuro);
+    font-weight: 600;
+    transition: 0.3s;
 }
 
-.nav-links a:hover{
-    color:#4CAF50;
+.nav-links a:hover {
+    color: var(--color-principal);
 }
 
-
-
-.info-section{
-    display:flex;
-    gap:30px;
-    padding:40px 8%;
+.info-section {
+    display: flex;
+    gap: 30px;
+    padding: 40px 8%;
 }
 
-.card{
-    background:white;
-    padding:35px;
-    border-radius:20px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.08);
-    flex:1;
-}
-.card:hover{
-    transform:translateY(-10px);
+.card {
+    background: var(--fondo-blanco);
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px var(--sombra-tarjeta);
+    flex: 1;
 }
 
-.card h2{
-    color:#2E7D32;
-    margin-bottom:20px;
-    font-size:32px;
+.card:hover {
+    transform: translateY(-10px);
 }
 
-.card p{
-    color:#555;
-    line-height:1.8;
-    font-size:18px;
+.card h2 {
+    color: var(--verde-subtitulo);
+    margin-bottom: 20px;
+    font-size: 32px;
 }
 
-
-.objectives{
-    padding:60px 8%;
+.card p {
+    color: var(--color-texto-medio);
+    line-height: 1.8;
+    font-size: 18px;
 }
 
-.objectives h2{
-    text-align:center;
-    font-size:45px;
-    color:#183b1f;
-    margin-bottom:50px;
+.objectives {
+    padding: 60px 8%;
 }
 
-.objectives-container{
-    display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
-    gap:30px;
+.objectives h2 {
+    text-align: center;
+    font-size: 45px;
+    color: var(--verde-titulo);
+    margin-bottom: 50px;
 }
 
-.objective-card{
-    background:white;
-    padding:30px;
-    border-radius:20px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.08);
-    transition:0.3s;
+.objectives-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
 }
 
-.objective-card:hover{
-    transform:translateY(-10px);
+.objective-card {
+    background: var(--fondo-blanco);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px var(--sombra-tarjeta);
+    transition: 0.3s;
 }
 
-.objective-card h3{
-    color:#4CAF50;
-    margin-bottom:15px;
-    font-size:25px;
+.objective-card:hover {
+    transform: translateY(-10px);
 }
 
-.objective-card p{
-    color:#555;
-    line-height:1.7;
+.objective-card h3 {
+    color: var(--color-principal);
+    margin-bottom: 15px;
+    font-size: 25px;
 }
 
+.objective-card p {
+    color: var(--color-texto-medio);
+    line-height: 1.7;
+}
 
+.testimonios {
+    padding: 60px 20px;
+    background: var(--fondo-seccion);
+    text-align: center;
+}
 
-@media (max-width:768px){
+.testimonios h2 {
+    color: var(--verde-subtitulo);
+    margin-bottom: 40px;
+}
 
-    .about-hero{
-        flex-direction:column;
+.testimonios .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.testimonios .card {
+    background: var(--fondo-blanco);
+    border-radius: 12px;
+    padding: 30px;
+    flex: 1;
+    min-width: 280px;
+    max-width: 350px;
+    box-shadow: 0 4px 15px var(--sombra-testimonio);
+    transition: transform 0.3s ease;
+}
+
+.testimonios .card:hover {
+    transform: translateY(-5px);
+}
+
+.stars {
+    margin-bottom: 15px;
+}
+
+.comment {
+    font-style: italic;
+    color: var(--color-texto-medio);
+    margin-bottom: 20px;
+}
+
+.cliente {
+    color: var(--color-texto-tarjeta);
+    font-weight: bold;
+}
+
+.cliente-rol {
+    color: var(--color-texto-rol);
+    font-size: 0.9rem;
+}
+
+footer {
+    background-color: var(--fondo-footer);
+    padding: 40px 0 20px 0;
+    margin-top: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+footer > p {
+    text-align: center;
+    font-size: 14px;
+    color: var(--color-texto-claro);
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--borde-footer);
+}
+
+@media (max-width: 768px) {
+    .about-hero {
+        flex-direction: column;
     }
 
-    .about-text h1{
-        font-size:40px;
-        text-align:center;
+    .about-text h1 {
+        font-size: 40px;
+        text-align: center;
     }
 
-    .about-text p{
-        text-align:center;
-        font-size:18px;
+    .about-text p {
+        text-align: center;
+        font-size: 18px;
     }
 
-    .info-section{
-        flex-direction:column;
+    .info-section {
+        flex-direction: column;
     }
 
-    .objectives h2{
-        font-size:35px;
+    .objectives h2 {
+        font-size: 35px;
     }
-
 }

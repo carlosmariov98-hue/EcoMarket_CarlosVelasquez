@@ -1,52 +1,69 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+:root {
+    --color-principal: #4CAF50;
+    --color-principal-hover: #439a46;
+    --color-texto-oscuro: #1d1d1d;
+    --color-texto-medio: #666666;
+    --color-alerta: #f44336;
+    --color-desactivado: #cccccc;
+    --color-enfoque-filtro: #0a892e;
+    --verde-titulo: #00520a;
+    --fondo-pagina: #f4f8f2;
+    --fondo-blanco: #ffffff;
+    --fondo-imagen: #f9f9f9;
+    --fondo-barra-stock: #e0e0e0;
+    --fondo-footer: #f4fcf6;
+    --borde-footer: #e2f0e6;
+    --sombra-header: rgba(0, 0, 0, 0.05);
+    --sombra-tarjeta: rgba(0, 0, 0, 0.05);
+    --sombra-tarjeta-hover: rgba(0, 0, 0, 0.1);
+    --sombra-boton-hover: rgba(76, 175, 80, 0.2);
 }
 
-body{
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     font-family: Arial, Helvetica, sans-serif;
-    background:#f4f8f2;
-    color:#1d1d1d;
-
+    background: var(--fondo-pagina);
+    color: var(--color-texto-oscuro);
 }
 
-header{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px 8%;
-    background:white;
-    box-shadow:0 2px 10px rgba(0,0,0,0.05);
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: var(--fondo-blanco);
+    box-shadow: 0 2px 10px var(--sombra-header);
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
-.logo img{
-    width:220px;
+.logo img {
+    width: 220px;
 }
 
-.nav-links{
-    display:flex;
-    gap:30px;
-    list-style:none;
-    
+.nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
 }
 
-.nav-links a{
-    text-decoration:none;
-    color:#1d1d1d;
-    font-weight:600;
-    transition:0.3s;
+.nav-links a {
+    text-decoration: none;
+    color: var(--color-texto-oscuro);
+    font-weight: 600;
+    transition: 0.3s;
 }
 
-.nav-links a:hover{
-    color:#4CAF50;
+.nav-links a:hover {
+    color: var(--color-principal);
 }
 
-
-/* --- Contenedor de Filtros --- */
 .category-filters {
     display: flex;
     justify-content: center;
@@ -59,12 +76,11 @@ header{
     top: 0;
 }
 
-/* --- Botones de Filtro --- */
 .filter-btn {
     display: inline-block;
     background-color: transparent;
-    color: #4CAF50; 
-    border: 2px solid #4CAF50;
+    color: var(--color-principal); 
+    border: 2px solid var(--color-principal);
     padding: 8px 20px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
@@ -76,9 +92,9 @@ header{
 }
 
 .filter-btn:hover {
-    background-color: #4CAF50;
-    color: white;
-    box-shadow: 0 4px 10px rgba(76, 175, 80, 0.2);
+    background-color: var(--color-principal);
+    color: var(--fondo-blanco);
+    box-shadow: 0 4px 10px var(--sombra-boton-hover);
 }
 
 .products-container {
@@ -88,10 +104,9 @@ header{
 .products-container h2 {
     text-align: center;
     font-size: 2rem;
-    color: #00520a;
+    color: var(--verde-titulo);
     margin-bottom: 40px;
 }
-
 
 .category-section {
     margin-bottom: 50px;
@@ -99,38 +114,59 @@ header{
 
 .category-title {
     font-size: 1.5rem;
-    color: #1d1d1d;
-    border-left: 5px solid #4CAF50; 
+    color: var(--color-texto-oscuro);
+    border-left: 5px solid var(--color-principal); 
     padding-left: 10px;
     margin-bottom: 20px;
 }
 
+
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 30px;
 }
 
+
+@media (max-width: 1024px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px; 
+    }
+}
+
+
+@media (max-width: 480px) {
+    .product-grid {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 15px;
+    }
+    .products-container {
+        padding: 20px 4%; 
+    }
+}
+
+
 .product-card {
-    background-color: white;
+    background-color: var(--fondo-blanco);
     border-radius: 8px;
-    overflow:hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    box-shadow: 0 4px 15px var(--sombra-tarjeta);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
 }
 
 .product-card:hover {
-    transform: translatey(-5px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px var(--sombra-tarjeta-hover);
 }
 
 .product-img {
     width: 100%;
     height: 200px;
     object-fit: cover;
-    background-color: #f9f9f9; 
+    background-color: var(--fondo-imagen); 
 }
 
 .product-info {
@@ -142,42 +178,41 @@ header{
 
 .product-name {
     font-size: 1.1rem;
-    color: #1d1d1d;
+    color: var(--color-texto-oscuro);
     margin-bottom: 8px;
 }
 
 .product-desc {
     font-size: 0.9rem;
-    color: #666;
+    color: var(--color-texto-medio);
     margin-bottom: 15px;
     line-height: 1.4;
-    flex-grow: 1; /* Empuja el precio y stock hacia abajo para que se alineen */
+    flex-grow: 1;
 }
 
 .product-price {
     font-size: 1.2rem;
     font-weight: 700;
-    color: #1d1d1d;
+    color: var(--color-texto-oscuro);
     margin-bottom: 15px;
 }
 
-/* --- Barras de Disponibilidad Dinámicas --- */
 .stock-status {
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
 
-.status-bar {
+.status-barra {
     height: 6px;
     width: 100%;
     border-radius: 3px;
-    background-color: #e0e0e0;
+    background-color: var(--fondo-barra-stock);
     position: relative;
     overflow: hidden;
 }
 
-.status-bar::after {
+.status-barra::after {
     content: '';
     position: absolute;
     left: 0;
@@ -191,26 +226,27 @@ header{
     font-weight: 600;
 }
 
-/* Estado: Disponible (Verde) */
-.available .status-bar::after {
+.disponible .status-barra::after {
     width: 100%;
-    background-color: #4CAF50;
-}
-.available .status-text {
-    color: #4CAF50;
+    background-color: var(--color-principal);
 }
 
-/* Estado: Agotado (Rojo) */
-.out-of-stock .status-bar::after {
+.disponible .status-text {
+    color: var(--color-principal);
+}
+
+.agotado .status-barra::after {
     width: 15%;
-    background-color: #f44336;
+    background-color: var(--color-alerta);
 }
-.out-of-stock .status-text {
-    color: #f44336;
+
+.agotado .status-text {
+    color: var(--color-alerta);
 }
-.btn-add-cart {
-    background-color: #4CAF50;
-    color: white;
+
+.btn-add {
+    background-color: var(--color-principal);
+    color: var(--fondo-blanco);
     border: none;
     padding: 10px 15px;
     font-family: Arial, Helvetica, sans-serif;
@@ -218,25 +254,22 @@ header{
     font-weight: 600;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 15px; /* Separa el botón de la barra de stock */
+    margin-top: 15px;
     transition: background-color 0.2s ease, transform 0.1s ease;
-    width: 100%; /* Ocupa todo el ancho de la tarjeta */
+    width: 100%;
 }
 
-
-.btn-add-cart:hover {
-    background-color: #439a46; 
+.btn-add:hover {
+    background-color: var(--color-principal-hover); 
 }
 
-
-.btn-add-cart:active {
+.btn-add:active {
     transform: scale(0.98); 
 }
 
-
-.out-of-stock ~ .btn-add-cart {
-    background-color: #ccc;
-    color: #666;
+.agotado ~ .btn-add {
+    background-color: var(--color-desactivado);
+    color: var(--color-texto-medio);
     cursor: not-allowed;
 }
 
@@ -253,6 +286,22 @@ body:has(#bolsas:target) .category-section:not(#bolsas) {
 }
 
 .category-filters a:target {
-    background-color: #0a892e;
-    color: white;
+    background-color: var(--color-enfoque-filtro);
+    color: var(--fondo-blanco);
+}
+
+footer {
+    background-color: var(--fondo-footer); 
+    padding: 40px 0 20px 0;
+    margin-top: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+footer > p {
+    text-align: center;
+    font-size: 14px;
+    color: var(--color-texto-medio);
+    margin-top: 0;
+    padding-top: 10px;
+    border-top: 1px solid var(--borde-footer);
 }
