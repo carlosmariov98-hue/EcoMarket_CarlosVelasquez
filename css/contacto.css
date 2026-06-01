@@ -32,7 +32,7 @@ header{
 
 .nav-links a{
     text-decoration:none;
-    color:#1d1d1d;
+    color:#121312;
     font-weight:600;
     transition:0.3s;
 }
@@ -80,7 +80,7 @@ main > section:first-child img {
 
 .contact {
     flex: 1;
-    background-color: #f9fbf7; 
+    background-color: #e3e0e0; 
     padding: 40px;
     border-radius: 15px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.02); 
@@ -103,7 +103,7 @@ main > section:first-child img {
     width: 100%;
     padding: 14px 18px;
     font-size: 15px;
-    border: 1px solid #ccdcd0;
+    border: 1px solid #ff4d4d;
     border-radius: 8px;
     outline: none;
     transition: all 0.3s ease;
@@ -115,10 +115,17 @@ main > section:first-child img {
     resize: none;
 }
 
+.contact input:focus, 
+.contact textarea:focus,
+.contact input:not(:placeholder-shown),
+.contact textarea:not(:placeholder-shown) {
+    border-color: #0a892e;
+}
+
 
 .contact input:focus, 
-.contact textarea:focus {
-    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.15); 
+.contact textarea:focus { 
+    box-shadow: 0 0 0 3px rgba(10, 137, 46, 0.15);
 }
 
 .contact .btn {
