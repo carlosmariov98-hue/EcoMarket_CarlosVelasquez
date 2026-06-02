@@ -46,5 +46,15 @@ git clone [https://github.com/carlosmariov98-hue/EcoMarket_CarlosVelasquez.git](
 
 5. Haz clic derecho sobre index.html y selecciona "Open with Live Server" (o presiona el botón Go Live en la barra inferior de VS Code) para abrir tu navegador y visualizar pa pagina web.
 
+---
+
+### 🖥️ Vista de la Aplicación (Escritorio vs. Móvil)
+
+| Sección | Vista Escritorio | Vista Móvil |
+| :--- | :---: | :---: |
+| **Inicio** | ![Inicio Escritorio](img/capturas/inicioescritorio.png) | ![Inicio Móvil](img/capturas/iniciomovil.png) |
+| **Productos** | ![Productos Escritorio](img/capturas/productosescritorio.png) | ![Productos Móvil](img/capturas/nosotrosmovil.png) |
+| **Nosotros** | ![Nosotros Escritorio](img/capturas/nosotrosescritorio.png) | ![Nosotros Móvil](img/capturas/nosotrosmovil.png) |
+| **Contacto** | ![Contacto Escritorio](img/capturas/contactoescritorio.png) | ![Contacto Móvil](img/capturas/contactomovil.png) |
 
 
