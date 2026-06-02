@@ -53,7 +53,7 @@ git clone [https://github.com/carlosmariov98-hue/EcoMarket_CarlosVelasquez.git](
 | Sección | Vista Escritorio | Vista Móvil |
 | :--- | :---: | :---: |
 | **Inicio** | ![Inicio Escritorio](img/capturas/inicioescritorio.png) | ![Inicio Móvil](img/capturas/iniciomovil.png) |
-| **Productos** | ![Productos Escritorio](img/capturas/productosescritorio.png) | ![Productos Móvil](img/capturas/nosotrosmovil.png) |
+| **Productos** | ![Productos Escritorio](img/capturas/productosescritorio.png) | ![Productos Móvil](img/capturas/productosmovil.png) |
 | **Nosotros** | ![Nosotros Escritorio](img/capturas/nosotrosescritorio.png) | ![Nosotros Móvil](img/capturas/nosotrosmovil.png) |
 | **Contacto** | ![Contacto Escritorio](img/capturas/contactoescritorio.png) | ![Contacto Móvil](img/capturas/contactomovil.png) |
 
