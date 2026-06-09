@@ -285,11 +285,6 @@ body:has(#bolsas:target) .category-section:not(#bolsas) {
     display: none;
 }
 
-.category-filters a:target {
-    background-color: var(--color-enfoque-filtro);
-    color: var(--fondo-blanco);
-}
-
 footer {
     background-color: var(--fondo-footer); 
     padding: 40px 0 20px 0;
